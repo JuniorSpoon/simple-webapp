@@ -1,9 +1,7 @@
-FROM ubuntu:16.04
+FROM ubuntu:23.10
 RUN apt-get update
-RUN add-apt-repository ppa:deadsnakes/ppa
-RUN apt-get update
-RUN apt-get install python3.6
-RUN python -m pip3 install --upgrade pip
-RUN pip3 install -U Flask
+RUN apt-get install python
+RUN python -m pip install --upgrade pip
+RUN pip install -U Flask
 COPY app.py /opt/
 ENTRYPOINT FLASK_APP=/opt/app.py flask run --host=0.0.0.0 --port=8080
