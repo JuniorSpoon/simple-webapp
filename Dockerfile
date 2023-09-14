@@ -1,5 +1,8 @@
 FROM ubuntu:16.04
 RUN apt-get update
+RUN apt-get install software-properties-common
+RUN add-apt-repository ppa:deadsnakes/ppa
+RUN apt-get update
 RUN apt-get install python3.6
 RUN python -m pip3 install --upgrade pip
 RUN pip3 install -U Flask
