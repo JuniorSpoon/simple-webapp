@@ -1,4 +1,4 @@
-FROM ubuntu:23.10
+FROM ubuntu:latest
 RUN apt-get update
 RUN apt-get install python
 RUN python -m pip install --upgrade pip
