@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 RUN apt-get update
-RUN apt-get install python3.10
+RUN apt-get install python3.6
 RUN python -m pip3 install --upgrade pip
 RUN pip3 install -U Flask
 COPY app.py /opt/
